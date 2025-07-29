@@ -39,7 +39,7 @@ export default function DocumentsScreen({ navigation }) {
 
   const fetchRequests = async (userId) => {
     try {
-      const res = await fetch(`${BASE_URL}/RESIDENT_COPY1/database/get_request.php`, {
+      const res = await fetch(`${BASE_URL}get_request.php`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user_id: userId }),
@@ -56,7 +56,7 @@ export default function DocumentsScreen({ navigation }) {
   };
 
   useEffect(() => {
-    fetch(`${BASE_URL}/RESIDENT_COPY1/database/get_services.php`)
+    fetch(`${BASE_URL}get_services.php`)
       .then(res => res.json())
       .then(data => setServices(data))
       .catch(err => console.error('Error fetching services:', err));
@@ -74,7 +74,7 @@ export default function DocumentsScreen({ navigation }) {
       purpose: purpose,
     };
 
-    fetch(`${BASE_URL}/RESIDENT_COPY1/database/submit_request.php`, {
+    fetch(`${BASE_URL}submit_request.php`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(requestData),
