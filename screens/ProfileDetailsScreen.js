@@ -138,7 +138,7 @@ const ProfileDetailsScreen = ({ navigation }) => {
         <View style={[styles.avatarContainer, { backgroundColor: colors.avatarBackground }]}>
           {profileData.image_url ? (
             <Image
-              source={{ uri: `${BASE_URL}/BRGY/BRGYGO/uploads/${profileData.image_url}` }}
+              source={{ uri: `https://brgygo-admin.onrender.com/uploads/${profileData.image_url}` }}
               style={styles.avatarImage}
             />
           ) : (
