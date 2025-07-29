@@ -79,7 +79,7 @@ export default function ProfileScreen({ navigation }) {
       <View style={[styles.header, { backgroundColor: colors.header }]}>
         {resident?.image_url ? (
         <Image
-          source={{ uri: `${BASE_URL}/BRGY/BRGYGO/uploads/${resident.image_url}` }}
+          source={{ uri: `https://brgygo-admin.onrender.com/uploads/${resident.image_url}` }}
           style={styles.avatarCircle}
         />
         ) : (
