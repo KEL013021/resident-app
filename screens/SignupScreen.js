@@ -72,7 +72,7 @@ export default function SignupScreen({ navigation }) {
     if (!valid) return;
 
     try {
-      const response = await fetch(`${BASE_URL}/RESIDENT_COPY1/database/signup.php`, {
+      const response = await fetch(`${BASE_URL}/database/signup.php`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
