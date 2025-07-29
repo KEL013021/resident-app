@@ -21,7 +21,7 @@ export default function HomeScreen({ navigation }) {
 
 useEffect(() => {
   const fetchAnnouncements = () => {
-    fetch(`${BASE_URL}/BRGY/RESIDENT_COPY1/database/get_announcements.php`)
+    fetch(`${BASE_URL}/get_announcements.php`)
       .then(response => response.text())
       .then(text => {
         console.log('⚠️ Raw response:', text);
