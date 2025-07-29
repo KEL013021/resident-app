@@ -55,12 +55,23 @@ export default function DocumentsScreen({ navigation }) {
     }
   };
 
-  useEffect(() => {
+ useEffect(() => {
+  const fetchServices = () => {
     fetch(`${BASE_URL}/get_services.php`)
       .then(res => res.json())
       .then(data => setServices(data))
       .catch(err => console.error('Error fetching services:', err));
-  }, []);
+  };
+
+  fetchServices(); // Initial fetch
+
+  const interval = setInterval(() => {
+    fetchServices(); // Poll every 10 seconds
+  }, 10000); // 10000ms = 10s
+
+  return () => clearInterval(interval); // Clear on unmount
+}, []);
+
 
   const handleSubmit = () => {
     if (!purpose || !documentType || !userId) {
