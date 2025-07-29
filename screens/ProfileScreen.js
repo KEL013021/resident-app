@@ -33,7 +33,7 @@ export default function ProfileScreen({ navigation }) {
           return;
         }
 
-        const response = await fetch(`${BASE_URL}/RESIDENT_COPY1/database/resident_get.php`, {
+        const response = await fetch(`${BASE_URL}/resident_get.php`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
