@@ -14,7 +14,7 @@ const ProfileDetailsScreen = ({ navigation }) => {
       try {
         const storedId = await AsyncStorage.getItem('user_id');
         if (storedId) {
-          const response = await fetch(`${BASE_URL}/BRGY/RESIDENT_COPY1/database/profiledetails.php?user_id=${storedId}`);
+          const response = await fetch(`${BASE_URL}/profiledetails.php?user_id=${storedId}`);
           const data = await response.json();
 
           if (!data.error) {
