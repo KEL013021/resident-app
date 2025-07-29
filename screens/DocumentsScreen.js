@@ -67,7 +67,7 @@ export default function DocumentsScreen({ navigation }) {
 
   const interval = setInterval(() => {
     fetchServices(); // Poll every 10 seconds
-  }, 10000); // 10000ms = 10s
+  }, 3000); // 10000ms = 10s
 
   return () => clearInterval(interval); // Clear on unmount
 }, []);
