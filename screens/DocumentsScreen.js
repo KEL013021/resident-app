@@ -30,6 +30,7 @@ export default function DocumentsScreen({ navigation }) {
           setUserId(parsedId);
           fetchRequests(parsedId);
         }
+         fetchRequests(parsedId);
       } catch (error) {
         console.error('Error initializing data:', error);
       }
